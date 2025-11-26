@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delicious Food App UI Clone</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="cdnjs.cloudflare.com">
+</head>
+<body>
+
+    <div class="app-container">
+        <div class="menu-panel">
+            <header class="header-menu">
+                <div class="header-icons">
+                    <i class="fas fa-bars"></i>
+                    <i class="fas fa-shopping-cart cart-icon"></i>
+                </div>
+                <h2>Delicious Food</h2>
+                <p>We made fresh and Healthy food</p>
+            </header>
+
+            <nav class="categories">
+                <div class="category-icon active"><i class="fas fa-drumstick-bite"></i></div>
+                <div class="category-icon"><i class="fas fa-fish"></i></div>
+                <div class="category-icon"><i class="fas fa-seedling"></i></div>
+                <div class="category-icon"><i class="fas fa-cheese"></i></div>
+            </nav>
+
+            <div class="menu-list">
+                <div class="menu-item">
+                    <img src="./Img/ramen.jpg" alt="Crab Ramen">
+                    <div class="item-details">
+                        <h3>Crab Ramen</h3>
+                        <p>Spicy with garlic</p>
+                        <span class="price">$24.00</span>
+                    </div>
+                    <i class="far fa-heart favorite-icon"></i>
+                </div>
+                <div class="menu-item">
+                    <img src="./Img/pollo.jpg" alt="Chicken Slice">
+                    <div class="item-details">
+                        <h3>Chicken Slice</h3>
+                        <p>Real chicken</p>
+                        <span class="price">$12.00</span>
+                    </div>
+                    <i class="far fa-heart favorite-icon"></i>
+                </div>
+                <div class="menu-item active-item">
+                    <img src="./Img/egg.jpg" alt="Eggs Curry">
+                    <div class="item-details">
+                        <h3>Eggs Curry</h3>
+                        <p>Eggs to tomato and sauce</p>
+                        <span class="price">$15.00</span>
+                    </div>
+                    <i class="far fa-heart favorite-icon"></i>
+                </div>
+            </div>
+
+            <footer class="navbar-bottom">
+                <i class="fas fa-home active"></i>
+                <i class="fas fa-bookmark"></i>
+                <i class="fas fa-comment-dots"></i>
+                <i class="fas fa-user"></i>
+            </footer>
+        </div>
+        <div class="detail-panel">
+            <header class="header-detail">
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-ellipsis-v"></i>
+            </header>
+            <img src="./Img/egg.jpg" alt="Eggs Curry large view" class="main-dish-img">
+            
+            <div class="dish-info">
+                <h1>Eggs Curry</h1>
+                <span class="cook-time"><i class="far fa-clock"></i> 25 Mins</span>
+                <p>Eggs Curry with tomato and cucumbers our chefs special healthy and fat free dish for those who want to lose weight.</p>
+                
+                <div class="pricing-section">
+                    <span>Total Price</span>
+                    <span class="total-price">$ 15.00</span>
+                </div>
+                
+                <div class="action-buttons">
+                    <i class="far fa-heart detail-heart-icon"></i>
+                    <button class="add-to-cart-btn">Add to Cart <i class="fas fa-plus"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

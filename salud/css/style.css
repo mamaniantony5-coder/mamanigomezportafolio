@@ -1,0 +1,259 @@
+:root {
+    --bg-color: #f0f4f8;
+    --card-bg: #fff;
+    --text-dark: #333;
+    --text-light: #666;
+    --orange-accent: #ff9800;
+    --blue-accent: #7b68ee;
+    --green-accent: #4CAF50;
+    --shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: var(--text-dark);
+}
+
+.dashboard-container {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr; 
+    gap: 20px;
+    width: 90%;
+    max-width: 1200px;
+    height: 650px;
+}
+.expenses-card {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.customers-card {
+    grid-area: 1 / 2 / 2 / 3; 
+}
+
+.money-spent-card {
+    grid-area: 1 / 3 / 2 / 4;
+}
+
+.files-card {
+    grid-area: 2 / 1 / 3 / 3;
+}
+
+.overview-card {
+    grid-area: 2 / 3 / 3 / 4; 
+    background-color: var(--blue-accent);
+    color: white;
+}
+.card {
+    background: var(--card-bg);
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+}
+
+.card-header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.card-title {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--text-dark);
+}
+.overview-card .card-title { color: white; }
+.card-content-main {
+    margin-top: 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.currency-symbol {
+    font-size: 1.5rem;
+    color: var(--text-light);
+    margin-top: 10px;
+}
+
+.main-value {
+    font-size: 3.5rem;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.change-indicator {
+    font-size: 0.9rem;
+    margin-top: 20px;
+    padding: 5px 10px;
+    border-radius: 15px;
+}
+
+.change-indicator.down {
+    color: #f44336;
+    background-color: rgba(244, 67, 54, 0.1);
+}
+
+.view-all-btn {
+    background: var(--bg-color);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    margin-top: auto; 
+    align-self: flex-start;
+}
+.customer-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+.customer-item:last-of-type { border-bottom: none; }
+
+.customer-item i { color: var(--text-light); font-size: 0.7rem; }
+
+.customer-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    background: var(--bg-color);
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    margin: 15px 0;
+}
+.customer-details span:nth-child(even) { font-weight: bold; text-align: right; }
+.tabs { gap: 10px; }
+.tab { padding: 5px 15px; border-radius: 15px; font-size: 0.9rem; cursor: pointer; }
+.tab.active { background: var(--bg-color); font-weight: bold; }
+
+.chart-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    margin: 15px 0;
+}
+
+.doughnut-chart {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: conic-gradient(var(--orange-accent) 0deg 75%, var(--blue-accent) 75deg 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.chart-inner-text {
+    background: white;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1) inset;
+}
+
+.chart-value { font-size: 1.5rem; font-weight: bold; }
+.chart-label { font-size: 0.7rem; color: var(--text-light); }
+
+.chart-legend {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 0.8rem;
+    color: var(--text-light);
+}
+
+.legend-item { display: flex; align-items: center; gap: 5px; }
+.legend-color { width: 10px; height: 10px; border-radius: 50%; }
+.legend-color.spent { background: var(--orange-accent); }
+.legend-color.refferal { background: var(--blue-accent); }
+.file-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    font-size: 0.8rem;
+    border-bottom: 1px solid #eee;
+}
+.file-item:last-child { border-bottom: none; }
+
+.file-item span:nth-child(1) { flex-grow: 1; }
+
+.tag { padding: 5px 10px; border-radius: 15px; margin-left: 10px; font-size: 0.7rem; }
+.admin { background: var(--bg-color); color: var(--text-light); }
+.status { background: #e0f2fe; color: #0288d1; font-weight: bold; }
+.overview-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.overview-item span { color: rgba(255, 255, 255, 0.8); font-size: 0.8rem; }
+.overview-item h3 { color: white; font-size: 1.5rem; margin-top: 2px; }
+
+.overview-item > div { flex-grow: 1; margin-left: 15px; }
+
+.icon-box {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+}
+
+.status-arrow.up { color: var(--green-accent); }
+.status-arrow.down { color: #f44336; }
+
+.view-details-btn {
+    background: var(--card-bg);
+    color: var(--blue-accent);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    margin-top: auto;
+    align-self: flex-start;
+}
+@media (max-width: 1024px) {
+    .dashboard-container {
+        grid-template-columns: 1fr 1fr;
+        height: auto;
+    }
+    .expenses-card { grid-area: 1 / 1 / 2 / 2; }
+    .customers-card { grid-area: 1 / 2 / 2 / 3; }
+    .money-spent-card { grid-area: 2 / 1 / 3 / 3; } 
+    .files-card { grid-area: 3 / 1 / 4 / 2; }
+    .overview-card { grid-area: 3 / 2 / 4 / 3; }
+}
+
+@media (max-width: 600px) {
+     .dashboard-container {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+    .expenses-card, .customers-card, .money-spent-card, .files-card, .overview-card {
+        grid-area: auto !important;
+    }
+}

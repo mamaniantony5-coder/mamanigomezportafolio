@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Dashboard UI Clone</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="cdnjs.cloudflare.com">
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-logo">A</div>
+            <nav class="nav-links">
+                <a href="#" class="active"><i class="fas fa-home"></i></a>
+                <a href="#"><i class="fas fa-chart-bar"></i></a>
+                <a href="#"><i class="fas fa-wallet"></i></a>
+                <a href="#"><i class="fas fa-cog"></i></a>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <header class="main-header">
+                <div class="header-left">
+                    <h1>Dashboard</h1>
+                    <p>Payments updates</p>
+                </div>
+                <div class="header-right">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search...">
+                    </div>
+                    <i class="far fa-calendar-alt icon-btn"></i>
+                    <i class="far fa-bell icon-btn"></i>
+                    <div class="user-avatar">
+                        <img src="./img/perfil.jpg" alt="User Avatar">
+                    </div>
+                </div>
+            </header>
+            <section class="payments-grid">
+                <div class="card payment-card">
+                    <i class="fas fa-arrow-right-arrow-left card-icon"></i>
+                    <span>Transfer via Card number</span>
+                    <h3>$1200</h3>
+                </div>
+                <div class="card payment-card">
+                    <i class="fas fa-arrow-left card-icon"></i>
+                    <span>Transfer Other Bank</span>
+                    <h3>$150</h3>
+                </div>
+                <div class="card payment-card">
+                    <i class="fas fa-bank card-icon"></i>
+                    <span>Transfer Same Bank</span>
+                    <h3>$1500</h3>
+                </div>
+                <div class="card payment-card">
+                    <i class="fas fa-arrow-right-arrow-left card-icon"></i>
+                    <span>Transfer to Other Bank</span>
+                    <h3>$1500</h3>
+                </div>
+            </section>
+            <section class="bottom-area-grid">
+                <div class="left-column">
+                    <div class="balance-card card">
+                        <h2>Balance</h2>
+                        <h3>$1500</h3>
+                        <div class="chart-placeholder">
+                            <div class="bar-chart-simulation">
+                                <div class="bar" style="height: 30%;"></div>
+                                <div class="bar" style="height: 60%;"></div>
+                                <div class="bar" style="height: 80%;"></div>
+                                <div class="bar" style="height: 50%;"></div>
+                                <div class="bar" style="height: 70%;"></div>
+                                <div class="bar" style="height: 40%;"></div>
+                                <div class="bar" style="height: 90%;"></div>
+                                <div class="bar" style="height: 75%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="history-card card">
+                        <h2>History</h2>
+                        <p>Transaction of last 6 months</p>
+
+                        <div class="history-item">
+                            <img src="./img/car.jpg" alt="User">
+                            <span>Car Insurance</span>
+                            <span class="history-time">10:42:23 AM</span>
+                            <span class="history-status completed">Completed</span>
+                        </div>
+                         <div class="history-item">
+                            <img src="./img/book.jpg" alt="User">
+                            <span>Book Purchase</span>
+                            <span class="history-time">12:42:00 PM</span>
+                            <span class="history-status completed">Completed</span>
+                        </div>
+                         <div class="history-item">
+                            <img src="./img/tarjet.jpg" alt="User">
+                            <span>Online Payment</span>
+                            <span class="history-time">10:42:27 AM</span>
+                            <span class="history-status completed">Completed</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-column">
+                    <div class="credit-card-container">
+                        <img src="./img/card.jpg" alt="Credit Card Design" class="credit-card-img">
+                    
+                    </div>
+
+                    <div class="activities-card card">
+                        <h2>Recent Activities</h2>
+                        <div class="activity-item">
+                            <i class="fas fa-tint activity-icon"></i>
+                            <span>Water Bill Successfully</span>
+                            <span class="activity-amount">$120</span>
+                        </div>
+                        <div class="activity-item">
+                            <i class="fas fa-sack-dollar activity-icon"></i>
+                            <span>Income Salary Received</span>
+                            <span class="activity-amount">$4500</span>
+                        </div>
+                        <div class="activity-item">
+                            <i class="fas fa-bolt activity-icon"></i>
+                            <span>Electric Bill Successfully</span>
+                            <span class="activity-amount">$150</span>
+                        </div>
+                         <div class="activity-item">
+                            <i class="fas fa-wifi activity-icon"></i>
+                            <span>Internet Bill Successfully</span>
+                            <span class="activity-amount">$60</span>
+                        </div>
+                    </div>
+
+                     <div class="activities-card card">
+                        <h2>Upcoming Payments</h2>
+                         <div class="activity-item">
+                            <i class="fas fa-home activity-icon"></i>
+                            <span>Home Rent Pending</span>
+                            <span class="activity-amount">$1500</span>
+                        </div>
+                         <div class="activity-item">
+                            <i class="fas fa-car activity-icon"></i>
+                            <span>Car Insurance Pending</span>
+                            <span class="activity-amount">$150</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+</body>
+</html>

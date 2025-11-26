@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Dashboard UI Clone</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="cdnjs.cloudflare.com">
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <div class="card expenses-card">
+            <div class="card-header-flex">
+                <span class="card-title">Expenses</span>
+            </div>
+            <div class="card-content-main">
+                <span class="currency-symbol">$</span>
+                <span class="main-value">349k</span>
+                <span class="change-indicator down">↓-36%</span>
+            </div>
+            <button class="view-all-btn">View all periods</button>
+        </div>
+        <div class="card customers-card">
+            <div class="card-header-flex">
+                <i class="fas fa-users card-header-icon"></i>
+                <span class="card-title">Customers</span>
+            </div>
+            <div class="customer-item">
+                <span class="customer-name">ABC Furniture</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="customer-item">
+                <span class="customer-name">Bank West</span>
+                <i class="fas fa-chevron-up"></i>
+            </div>
+            <div class="customer-details">
+                <span>Income</span> <span>$1346.00</span>
+                <span>Expenses</span> <span>$1000.00</span>
+            </div>
+            <div class="customer-item">
+                <span class="customer-name">Media group</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+        <div class="card money-spent-card">
+            <div class="card-header-flex tabs">
+                <span class="tab">Day</span>
+                <span class="tab active">Week</span>
+                <span class="tab">Month</span>
+            </div>
+            <div class="chart-container">
+                <div class="doughnut-chart">
+                    <div class="chart-inner-text">
+                        <span class="chart-value">$2000</span>
+                        <span class="chart-label">Money Spent</span>
+                    </div>
+                </div>
+            </div>
+            <div class="chart-legend">
+                <div class="legend-item"><span class="legend-color spent"></span> Spent</div>
+                <div class="legend-item"><span class="legend-color refferal"></span> Refferal</div>
+            </div>
+        </div>
+        <div class="card files-card">
+            <div class="card-header-flex">
+                <span class="card-title">Files and additional materials</span>
+                <i class="fas fa-ellipsis-h"></i>
+            </div>
+            <div class="file-item">
+                <span>💪 Cost accounting analytics</span>
+                <span class="tag admin">@adminl</span>
+                <span class="tag status">Data validation</span>
+            </div>
+            <div class="file-item">
+                 <span>🏃‍♀️‍➡️ Key entry</span>
+                <span class="tag admin">@adminl</span>
+                <span class="tag status">Dealer order</span>
+            </div>
+             <div class="file-item">
+                 <span>🏋🏻‍♂️ Price group</span>
+                <span class="tag admin">@adminl</span>
+                 <span class="tag status">Data validation</span>
+            </div>
+             <div class="file-item">
+                 <span>👊🏻👊🏻 Nomenclature in prices</span>
+                <span class="tag admin">@adminl</span>
+                 <span class="tag status">Dealer order</span>
+            </div>
+        </div>
+        <div class="card overview-card">
+            <div class="card-header-flex">
+                <span class="card-title">Overview</span>
+            </div>
+            <div class="overview-item">
+                <div class="icon-box"><i class="fas fa-arrow-right-arrow-left"></i></div>
+                <div>
+                    <span>income</span>
+                    <h3>$ 590k</h3>
+                </div>
+                <i class="fas fa-arrow-up status-arrow up"></i>
+            </div>
+            <div class="overview-item">
+                 <div class="icon-box"><i class="fas fa-file-invoice"></i></div>
+                <div>
+                    <span>net income</span>
+                    <h3>$ 49k</h3>
+                </div>
+                 <i class="fas fa-arrow-down status-arrow down"></i>
+            </div>
+            <button class="view-details-btn">View details.</button>
+        </div>
+    </div>
+
+</body>
+</html>
